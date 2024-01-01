@@ -19,5 +19,11 @@ interface UrlParts {
 }
 
 export function parseUrl(url: string): UrlParts {
-   // 請在此處寫下你的程式碼
+  const splitUrl = url.split('/');
+  const newUrl: UrlParts = {
+    protocol: splitUrl[0],
+    hostname: splitUrl[2],
+    path: `/${splitUrl[3]}`
+  };
+  return newUrl
 }
