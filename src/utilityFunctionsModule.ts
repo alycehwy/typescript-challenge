@@ -8,7 +8,7 @@
  * @returns - 回傳一個字串，表示格式化後的日期
  */
 export function formatDate(date: Date): string {
-    return date.toLocaleDateString('en-CA')
+    return date.toJSON().slice(0,10)
 }
 
 /**
